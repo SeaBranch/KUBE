@@ -16,7 +16,12 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let cubeScene = SCNScene(named: "art.scnassets/CubeOfMetal.scn")!
+        
+        let scene = SCNScene(named: "art.scnassets/SpaceScene.scn")!
+        scene.physicsWorld.gravity = .zero
+        scene.physicsWorld.removeAllBehaviors()
+        scene.background.contents = ["SKY_1_RIGHT", "SKY_1_LEFT", "SKY_1_TOP", "SKY_1_BOTTOM", "SKY_1_BACK", "SKY_1_FRONT"]
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -39,12 +44,20 @@ class GameViewController: UIViewController {
         ambientLightNode.light!.type = .ambient
         ambientLightNode.light!.color = UIColor.darkGray
         scene.rootNode.addChildNode(ambientLightNode)
+        let ship = cubeScene.rootNode.childNode(withName: "CubeOfMetal", recursively: true)!
+        
+        scene.rootNode.addChildNode(ship)
         
         // retrieve the ship node
-        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+        
         
         // animate the 3d object
-        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+        ship.physicsBody?.damping = 0
+        ship.physicsBody?.angularDamping = 0
+        
+        ship.physicsBody?.applyForce(SCNVector3(0, 0, 1), asImpulse: false)
+        ship.physicsBody?.applyTorque(SCNVector4(0, 0, 1, 1), asImpulse: false)
+//        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
         // retrieve the SCNView
         let scnView = self.view as! SCNView
@@ -118,4 +131,10 @@ class GameViewController: UIViewController {
         }
     }
 
+}
+
+extension SCNVector3 {
+    static var zero: SCNVector3 {
+        return SCNVector3(0, 0, 0)
+    }
 }
