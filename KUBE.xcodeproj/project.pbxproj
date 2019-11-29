@@ -15,6 +15,7 @@
 		282FB5672389ABC10098DDEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282FB5652389ABC10098DDEC /* LaunchScreen.storyboard */; };
 		282FB5722389ABC20098DDEC /* KUBETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282FB5712389ABC20098DDEC /* KUBETests.swift */; };
 		282FB57D2389ABC20098DDEC /* KUBEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282FB57C2389ABC20098DDEC /* KUBEUITests.swift */; };
+		284388EF2391CFED001CFB28 /* HUDStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284388EE2391CFED001CFB28 /* HUDStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		282FB5782389ABC20098DDEC /* KUBEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KUBEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		282FB57C2389ABC20098DDEC /* KUBEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUBEUITests.swift; sourceTree = "<group>"; };
 		282FB57E2389ABC20098DDEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284388EE2391CFED001CFB28 /* HUDStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HUDStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				282FB55C2389ABC00098DDEC /* art.scnassets */,
 				282FB55E2389ABC00098DDEC /* GameViewController.swift */,
 				282FB5602389ABC00098DDEC /* Main.storyboard */,
+				284388EE2391CFED001CFB28 /* HUDStoryboard.storyboard */,
 				282FB5632389ABC10098DDEC /* Assets.xcassets */,
 				282FB5652389ABC10098DDEC /* LaunchScreen.storyboard */,
 				282FB5682389ABC10098DDEC /* Info.plist */,
@@ -235,6 +238,7 @@
 				282FB55D2389ABC00098DDEC /* art.scnassets in Resources */,
 				282FB5672389ABC10098DDEC /* LaunchScreen.storyboard in Resources */,
 				282FB5642389ABC10098DDEC /* Assets.xcassets in Resources */,
+				284388EF2391CFED001CFB28 /* HUDStoryboard.storyboard in Resources */,
 				282FB5622389ABC00098DDEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

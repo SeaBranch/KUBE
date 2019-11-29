@@ -55,8 +55,8 @@ class GameViewController: UIViewController {
         ship.physicsBody?.damping = 0
         ship.physicsBody?.angularDamping = 0
         
-        ship.physicsBody?.applyForce(SCNVector3(0, 0, 1), asImpulse: false)
-        ship.physicsBody?.applyTorque(SCNVector4(0, 0, 1, 1), asImpulse: false)
+//        ship.physicsBody?.applyForce(SCNVector3(0, 0, 1), asImpulse: false)
+//        ship.physicsBody?.applyTorque(SCNVector4(0, 0, 10, 1), asImpulse: false)
 //        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
         // retrieve the SCNView
